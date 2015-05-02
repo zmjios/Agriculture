@@ -1,0 +1,17 @@
+//
+//  Agiculture-Prefix.h
+//  Agriculture
+//
+//  Created by 曾明剑 on 15/5/2.
+//  Copyright (c) 2015年 zmj. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "TCDefine.h"
+#import "TCDebug.h"
+
+#endif
