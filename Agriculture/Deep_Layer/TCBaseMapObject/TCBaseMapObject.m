@@ -10,7 +10,6 @@
 #import <objc/runtime.h>
 #import "AutoCoding.h"
 
-
 static const char TCMapObjectClassInArrayKey;   //存放对象的数组
 static NSSet *_foundationClasses;
 
@@ -31,6 +30,7 @@ static NSSet *_foundationClasses;
 @end
 
 @implementation TCBaseMapObject
+
 
 
 + (void)load

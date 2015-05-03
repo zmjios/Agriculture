@@ -1,0 +1,32 @@
+{
+    "1000":{
+        "ClassName":"HomePageViewController",
+        "Description":"主页",
+        "PageId":"1000",
+        "StackLevel":"10",
+        "PageList":"1000,1001,1002-1004"
+    },
+    "2000":{
+        "ClassName":"SearchPageViewController",
+        "Description":"搜素",
+        "PageId":"2000",
+        "StackLevel":"10",
+        "PageList":"2000,2001,2002-2004"
+    },
+    "3000":
+    {
+        "ClassName":"RecentPageViewController",
+        "Description":"最近",
+        "PageId":"3000",
+        "StackLevel":"10",
+        "PageList":"3000,3001"
+    },
+    "4000":
+    {
+        "ClassName":"PersonCenterViewController",
+        "Description":"个人中心",
+        "PageId":"4000",
+        "StackLevel":"10",
+        "PageList":"4000,4001,4002-4004"
+    }
+}
