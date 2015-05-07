@@ -77,6 +77,10 @@ typedef NS_ENUM(NSUInteger, TCControllerManagerConfigFileType) {
 - (TCBaseViewController *)createViewControllerPageId:(NSInteger)pageId;
 
 
+//导航栏控制器需要获取pagelist
+- (NSString *)getPageListByPageId:(NSInteger)pageId;
+
+
 - (BOOL)gotoPageWithPageId:(int)pageId;
 
 

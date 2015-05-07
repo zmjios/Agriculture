@@ -203,6 +203,7 @@ static NSString *errorDomain = @"TCControllerManagerErrorDomain";
 }
 
 
+
 - (TCControllerConfigItem *)getContrllerItem:(NSInteger)pageId
 {
     NSString *pageIdString = [NSString stringWithFormat:@"%ld",pageId];
@@ -212,6 +213,12 @@ static NSString *errorDomain = @"TCControllerManagerErrorDomain";
 }
 
 
+
+- (NSString *)getPageListByPageId:(NSInteger)pageId
+{
+    TCControllerConfigItem  *item = [self getContrllerItem:pageId];
+    return item.pageList;
+}
 
 
 - (void)notifyInvalidConfigAtKey:(NSString *)key {

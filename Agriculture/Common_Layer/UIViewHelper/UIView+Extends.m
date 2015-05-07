@@ -21,4 +21,46 @@
     return nil;
 }
 
+
+- (UIImage *)screenshot_Ext
+{
+    if ([[[UIDevice currentDevice] systemVersion] floatValue]<7.0)
+    {
+        
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, NO, 0);
+        [self.layer renderInContext:UIGraphicsGetCurrentContext()];
+        UIImage *screenshot = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        return screenshot;
+    }
+    else{
+        UIGraphicsBeginImageContext(self.bounds.size);
+        [self drawViewHierarchyInRect:self.bounds afterScreenUpdates:YES];
+        UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+        UIGraphicsEndImageContext();
+        
+        return image;
+    }
+    
+}
+
+
+- (UIView *)currentFirstResponderView_Ext
+{
+    if (self.isFirstResponder) {
+        return self;
+    }
+    
+    for (UIView *subView in self.subviews) {
+        UIView *firstResponder = [subView currentFirstResponderView_Ext];
+        if (firstResponder != nil) {
+            return firstResponder;
+        }
+        
+    }
+    
+    return nil;
+}
+
+
 @end

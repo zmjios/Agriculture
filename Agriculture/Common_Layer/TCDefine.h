@@ -52,8 +52,8 @@ return shared##classname;                           \
 
 //-------------------------------------------------------------------
 //屏幕尺寸
-#define kSCREEN_WIDTH   min([[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height)
-#define kSCREEN_HEIGHT  max([[UIScreen mainScreen] bounds].size.height,[[UIScreen mainScreen] bounds].size.width)
+#define kSCREEN_WIDTH   MIN([[UIScreen mainScreen] bounds].size.width,[[UIScreen mainScreen] bounds].size.height)
+#define kSCREEN_HEIGHT  MAX([[UIScreen mainScreen] bounds].size.height,[[UIScreen mainScreen] bounds].size.width)
 #define KIPHONE5_SIZE   ((kSCREEN_HEIGHT>480)?YES:NO)
 
 
@@ -64,6 +64,10 @@ return shared##classname;                           \
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN(v)                 ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
 #define SYSTEM_VERSION_LESS_THAN_OR_EQUAL_TO(v)     ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedDescending)
+
+
+
+//---------------------------------------------------------------------
 
 
 
